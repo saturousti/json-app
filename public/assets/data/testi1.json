@@ -1,0 +1,233 @@
+{
+  "version": "1.5.1",
+  "created": "2025-10-14T10:56:43.397485+00:00",
+  "heartrate": {
+    "description": "running average sampled every 10 seconds",
+    "errors": [],
+    "units": {
+      "time": "ms",
+      "hrv": "ms",
+      "rate": "bpm"
+    },
+    "measurements": [
+      {
+        "rate": 69,
+        "time": 10000,
+        "hrv": 113
+      },
+      {
+        "rate": 74,
+        "time": 20000,
+        "hrv": 108
+      },
+      {
+        "rate": 69,
+        "time": 30000,
+        "hrv": 106
+      },
+      {
+        "rate": 67,
+        "time": 40000,
+        "hrv": 126
+      },
+      {
+        "rate": 73,
+        "time": 50000,
+        "hrv": 97
+      },
+      {
+        "rate": 72,
+        "time": 60000,
+        "hrv": 110
+      },
+      {
+        "rate": 69,
+        "time": 70000,
+        "hrv": 90
+      },
+      {
+        "rate": 68,
+        "time": 80000,
+        "hrv": 132
+      },
+      {
+        "rate": 66,
+        "time": 90000,
+        "hrv": 89
+      },
+      {
+        "rate": 67,
+        "time": 100000,
+        "hrv": 99
+      },
+      {
+        "rate": 66,
+        "time": 110000,
+        "hrv": 107
+      },
+      {
+        "rate": 65,
+        "time": 120000,
+        "hrv": 54
+      },
+      {
+        "rate": 68,
+        "time": 130000,
+        "hrv": 258
+      },
+      {
+        "rate": 76,
+        "time": 140000,
+        "hrv": 130
+      },
+      {
+        "rate": 71,
+        "time": 150000,
+        "hrv": 62
+      },
+      {
+        "rate": 72,
+        "time": 160000,
+        "hrv": 125
+      },
+      {
+        "rate": 67,
+        "time": 170000,
+        "hrv": 107
+      },
+      {
+        "rate": 71,
+        "time": 180000,
+        "hrv": 114
+      },
+      {
+        "rate": 69,
+        "time": 190000,
+        "hrv": 149
+      },
+      {
+        "rate": 67,
+        "time": 200000,
+        "hrv": 102
+      },
+      {
+        "rate": 66,
+        "time": 210000,
+        "hrv": 135
+      },
+      {
+        "rate": 67,
+        "time": 220000,
+        "hrv": 77
+      },
+      {
+        "rate": 67,
+        "time": 230000,
+        "hrv": 115
+      },
+      {
+        "rate": 62,
+        "time": 231996,
+        "hrv": 92
+      }
+    ],
+    "trends": {
+      "hrv": {
+        "average": 112.375
+      },
+      "rate": {
+        "average": 68.66666666666667
+      }
+    }
+  },
+  "gIndex": {
+    "errors": [],
+    "measurements": [
+      {
+        "index": 64.47494987568123,
+        "time": 0
+      },
+      {
+        "index": 64.96312752571328,
+        "time": 30000
+      },
+      {
+        "index": 60.97125213366628,
+        "time": 60000
+      },
+      {
+        "index": 64.963170706098,
+        "time": 90000
+      },
+      {
+        "index": 65.2782955580716,
+        "time": 120000
+      },
+      {
+        "index": 64.76322461449911,
+        "time": 150000
+      },
+      {
+        "index": 66.3579093750011,
+        "time": 180000
+      },
+      {
+        "index": 75.17468521529233,
+        "time": 210000
+      }
+    ],
+    "description": "G-Index values",
+    "units": {
+      "index": null,
+      "time": "ms"
+    },
+    "trends": {
+      "average": 65.86832687550287
+    }
+  },
+  "brainPulsatility": {
+    "errors": [],
+    "measurements": [
+      {
+        "pulsatility": 31.986074601940764,
+        "time": 0
+      },
+      {
+        "pulsatility": 14.804125659375229,
+        "time": 30000
+      },
+      {
+        "pulsatility": 17.594119429177645,
+        "time": 60000
+      },
+      {
+        "pulsatility": 16.74470812196015,
+        "time": 90000
+      },
+      {
+        "pulsatility": 24.81037012860066,
+        "time": 120000
+      },
+      {
+        "pulsatility": 13.679430903031253,
+        "time": 150000
+      },
+      {
+        "pulsatility": 13.873701550942098,
+        "time": 180000
+      },
+      {
+        "pulsatility": 16.253163183486905,
+        "time": 210000
+      }
+    ],
+    "description": "Brain pulsatility values",
+    "units": {
+      "pulsatility": null,
+      "time": "ms"
+    },
+    "trends": {
+      "average": 18.718211697314338
+    }
+  }
+}
