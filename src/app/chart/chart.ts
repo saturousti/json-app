@@ -15,7 +15,7 @@ export class ChartComponent implements AfterViewInit {
   constructor(private http: HttpClient) {}
 
   ngAfterViewInit() {
-    this.http.get<any>('/assets/data/testi1.json').subscribe(data => {
+    this.http.get<any>('/assets/demo_result.json').subscribe(data => {
       
       const hr = data.heartrate.measurements;
 
