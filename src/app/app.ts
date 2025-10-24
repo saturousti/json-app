@@ -1,11 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ChartComponent } from './chart/chart';
+import { HeartRate } from './chart/chart';
+import { Hrv } from './hrv/hrv';
+import { PulsatilityComponent } from './pulsatility/pulsatility';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ChartComponent],
+  imports: [HeartRate, Hrv, PulsatilityComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
