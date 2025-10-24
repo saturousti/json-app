@@ -26,10 +26,10 @@ export class TrendScatter implements AfterViewInit {
       const pulsAvg = data.brainPulsatility.trends.average;
       const gIndexAvg = data.gIndex.trends.average;
       //const RateTrend = data.HRTrend.rate;
-      const hrvAvg = data.heartrate.trends.hrv.average;
-      const rateAvg = data.heartrate.trends.rate.average;
-      const pulsAvg = data.brainPulsatility.trends.average;
-      const gIndexAvg = data.gIndex.trends.average;
+      //const hrvAvg = data.heartrate.trends.hrv.average;
+      //const rateAvg = data.heartrate.trends.rate.average;
+     // const pulsAvg = data.brainPulsatility.trends.average;
+      //const gIndexAvg = data.gIndex.trends.average;
 
 
       new Chart(this.chartRef.nativeElement, {
