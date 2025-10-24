@@ -1,7 +1,9 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+mport { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import Chart from 'chart.js/auto';
+import { DemoResults } from '../../models';
+
 
 @Component({
   selector: 'app-chart',
@@ -9,20 +11,22 @@ import Chart from 'chart.js/auto';
   imports: [CommonModule],
   template: `<canvas #chartCanvas></canvas>`,
 })
-export class ChartComponent implements AfterViewInit {
+export class HeartRate implements AfterViewInit {
   @ViewChild('chartCanvas') chartRef!: ElementRef<HTMLCanvasElement>;
 
   constructor(private http: HttpClient) {}
 
   ngAfterViewInit() {
-    this.http.get<any>('/assets/data/testi1.json').subscribe(data => {
+
+    this.http.get<DemoResults>('/assets/data/demo_result.json').subscribe(data => {
       
       const hr = data.heartrate.measurements;
 
-      const labels = hr.map((row: any) => row.time / 1000);
+      const labels = hr.map(row => row.time / 1000);
 
-      const rates = hr.map((row: any) => row.rate);
-      const hrv = hr.map((row: any) => row.hrv);
+      const rates = hr.map(row => row.rate);
+      
+      const avgRate = data.heartrate.trends.rate.average;
 
       new Chart(this.chartRef.nativeElement, {
         type: 'line',
@@ -34,14 +38,12 @@ export class ChartComponent implements AfterViewInit {
               data: rates,
               borderWidth: 2,
               borderColor: 'red',
-              yAxisID: 'y1',
             },
             {
-              label: 'HRV (ms)',
-              data: hrv,
-              borderWidth: 2,
-              borderColor: 'blue',
-              yAxisID: 'y2',
+              label: 'Average Heart Rate',
+              data: Array(rates.length).fill(avgRate),
+              borderColor: 'green',
+              fill: false,
             },
           ],
         },
@@ -54,22 +56,14 @@ export class ChartComponent implements AfterViewInit {
           plugins: {
             title: {
               display: true,
-              text: 'Heart Rate and HRV over Time',
+              text: 'running average sampled every 10 seconds',
             },
           },
           scales: {
-            y1: {
+            y: {
               type: 'linear',
               display: true,
-              position: 'left',
               title: { display: true, text: 'Heart Rate (bpm)' },
-            },
-            y2: {
-              type: 'linear',
-              display: true,
-              position: 'right',
-              title: { display: true, text: 'HRV (ms)' },
-              grid: { drawOnChartArea: false },
             },
             x: {
               title: { display: true, text: 'Time (s)' },
