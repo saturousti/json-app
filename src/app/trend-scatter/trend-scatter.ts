@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import Chart from 'chart.js/auto';
-import { TrendResults } from '../../models';
+import { DemoResults } from '../../models';
 
 
 @Component({
@@ -19,12 +19,12 @@ export class TrendScatter implements AfterViewInit {
   constructor(private http: HttpClient) {}
 
   ngAfterViewInit() {
-    this.http.get<TrendResults>('/assets/data/demo_result.json').subscribe(data => {
+    this.http.get<DemoResults>('/assets/data/demo_result.json').subscribe(data => {
 
-      const hrvAvg = data.HRTrend.hrv.average;
-      const rateAvg = data.HRTrend.rate.average;
-      const pulsAvg = data.PulsatilityTrend.average;
-      const gIndexAvg = data.GIndexTrend.average;
+      const hrvAvg = data.heartrate.trends.hrv.average;
+      const rateAvg = data.heartrate.trends.rate.average;
+      const pulsAvg = data.brainPulsatility.trends.average;
+      const gIndexAvg = data.gIndex.trends.average;
       //const RateTrend = data.HRTrend.rate;
      const dataPoints = [
   { name: 'Heart Rate', value: rateAvg },

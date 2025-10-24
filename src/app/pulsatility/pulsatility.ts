@@ -18,7 +18,7 @@ export class PulsatilityComponent implements AfterViewInit {
    constructor(private http: HttpClient) {}
 
    ngAfterViewInit() {
-       this.http.get<DemoResults>('/assets/demo_result.json').subscribe(data => {
+       this.http.get<DemoResults>('/assets/data/demo_result.json').subscribe(data => {
              
              const brain = data.brainPulsatility.measurements;
        
